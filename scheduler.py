@@ -86,3 +86,7 @@ class TimetableScheduler:
 
         df = pd.DataFrame(schedule_data)
         return df, coloring
+        
+    def validate_coloring(self, coloring: dict) -> list[tuple[str, str]]:
+    """Return a list of conflicting pairs (empty list = valid)."""
+    return [(u, v) for u, v in self.graph.edges if coloring[u] == coloring[v]]
