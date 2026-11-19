@@ -1,0 +1,1152 @@
+{
+  "years": [
+    {
+      "year_id": "Y1",
+      "name": "FY",
+      "level": 1
+    },
+    {
+      "year_id": "Y2",
+      "name": "SY",
+      "level": 2
+    },
+    {
+      "year_id": "Y3",
+      "name": "TY",
+      "level": 3
+    }
+  ],
+  "divisions": [
+    {
+      "division_id": "Y1-D1",
+      "year_id": "Y1",
+      "name": "Div A"
+    },
+    {
+      "division_id": "Y1-D2",
+      "year_id": "Y1",
+      "name": "Div B"
+    },
+    {
+      "division_id": "Y2-D1",
+      "year_id": "Y2",
+      "name": "Div A"
+    },
+    {
+      "division_id": "Y2-D2",
+      "year_id": "Y2",
+      "name": "Div B"
+    },
+    {
+      "division_id": "Y3-D1",
+      "year_id": "Y3",
+      "name": "Div A"
+    },
+    {
+      "division_id": "Y3-D2",
+      "year_id": "Y3",
+      "name": "Div B"
+    }
+  ],
+  "batches": [
+    {
+      "batch_id": "Y1-D1-B1",
+      "division_id": "Y1-D1",
+      "name": "Batch 1"
+    },
+    {
+      "batch_id": "Y1-D1-B2",
+      "division_id": "Y1-D1",
+      "name": "Batch 2"
+    },
+    {
+      "batch_id": "Y1-D1-B3",
+      "division_id": "Y1-D1",
+      "name": "Batch 3"
+    },
+    {
+      "batch_id": "Y1-D2-B1",
+      "division_id": "Y1-D2",
+      "name": "Batch 1"
+    },
+    {
+      "batch_id": "Y1-D2-B2",
+      "division_id": "Y1-D2",
+      "name": "Batch 2"
+    },
+    {
+      "batch_id": "Y1-D2-B3",
+      "division_id": "Y1-D2",
+      "name": "Batch 3"
+    },
+    {
+      "batch_id": "Y2-D1-B1",
+      "division_id": "Y2-D1",
+      "name": "Batch 1"
+    },
+    {
+      "batch_id": "Y2-D1-B2",
+      "division_id": "Y2-D1",
+      "name": "Batch 2"
+    },
+    {
+      "batch_id": "Y2-D1-B3",
+      "division_id": "Y2-D1",
+      "name": "Batch 3"
+    },
+    {
+      "batch_id": "Y2-D2-B1",
+      "division_id": "Y2-D2",
+      "name": "Batch 1"
+    },
+    {
+      "batch_id": "Y2-D2-B2",
+      "division_id": "Y2-D2",
+      "name": "Batch 2"
+    },
+    {
+      "batch_id": "Y2-D2-B3",
+      "division_id": "Y2-D2",
+      "name": "Batch 3"
+    },
+    {
+      "batch_id": "Y3-D1-B1",
+      "division_id": "Y3-D1",
+      "name": "Batch 1"
+    },
+    {
+      "batch_id": "Y3-D1-B2",
+      "division_id": "Y3-D1",
+      "name": "Batch 2"
+    },
+    {
+      "batch_id": "Y3-D1-B3",
+      "division_id": "Y3-D1",
+      "name": "Batch 3"
+    },
+    {
+      "batch_id": "Y3-D2-B1",
+      "division_id": "Y3-D2",
+      "name": "Batch 1"
+    },
+    {
+      "batch_id": "Y3-D2-B2",
+      "division_id": "Y3-D2",
+      "name": "Batch 2"
+    },
+    {
+      "batch_id": "Y3-D2-B3",
+      "division_id": "Y3-D2",
+      "name": "Batch 3"
+    }
+  ],
+  "subjects": [
+    {
+      "subject_id": "Y1-S1",
+      "name": "Mathematics",
+      "year_id": "Y1",
+      "theory_hours": 4,
+      "practical_hours": 0,
+      "is_elective": false,
+      "lab_periods": 2
+    },
+    {
+      "subject_id": "Y1-S2",
+      "name": "Programming",
+      "year_id": "Y1",
+      "theory_hours": 3,
+      "practical_hours": 2,
+      "is_elective": false,
+      "lab_periods": 2
+    },
+    {
+      "subject_id": "Y1-S3",
+      "name": "Physics",
+      "year_id": "Y1",
+      "theory_hours": 3,
+      "practical_hours": 2,
+      "is_elective": false,
+      "lab_periods": 2
+    },
+    {
+      "subject_id": "Y1-S4",
+      "name": "Engineering Graphics",
+      "year_id": "Y1",
+      "theory_hours": 2,
+      "practical_hours": 2,
+      "is_elective": false,
+      "lab_periods": 2
+    },
+    {
+      "subject_id": "Y1-S5",
+      "name": "Data Structures",
+      "year_id": "Y1",
+      "theory_hours": 3,
+      "practical_hours": 2,
+      "is_elective": false,
+      "lab_periods": 2
+    },
+    {
+      "subject_id": "Y2-S1",
+      "name": "Data Structures",
+      "year_id": "Y2",
+      "theory_hours": 3,
+      "practical_hours": 2,
+      "is_elective": false,
+      "lab_periods": 2
+    },
+    {
+      "subject_id": "Y2-S2",
+      "name": "Digital Systems",
+      "year_id": "Y2",
+      "theory_hours": 3,
+      "practical_hours": 2,
+      "is_elective": false,
+      "lab_periods": 2
+    },
+    {
+      "subject_id": "Y2-S3",
+      "name": "Database Systems",
+      "year_id": "Y2",
+      "theory_hours": 3,
+      "practical_hours": 2,
+      "is_elective": false,
+      "lab_periods": 2
+    },
+    {
+      "subject_id": "Y2-S4",
+      "name": "Communication Skills",
+      "year_id": "Y2",
+      "theory_hours": 2,
+      "practical_hours": 0,
+      "is_elective": false,
+      "lab_periods": 2
+    },
+    {
+      "subject_id": "Y2-S5",
+      "name": "Cloud Computing",
+      "year_id": "Y2",
+      "theory_hours": 2,
+      "practical_hours": 2,
+      "is_elective": true,
+      "lab_periods": 2
+    },
+    {
+      "subject_id": "Y3-S1",
+      "name": "Digital Systems",
+      "year_id": "Y3",
+      "theory_hours": 3,
+      "practical_hours": 2,
+      "is_elective": false,
+      "lab_periods": 2
+    },
+    {
+      "subject_id": "Y3-S2",
+      "name": "Database Systems",
+      "year_id": "Y3",
+      "theory_hours": 3,
+      "practical_hours": 2,
+      "is_elective": false,
+      "lab_periods": 2
+    },
+    {
+      "subject_id": "Y3-S3",
+      "name": "Communication Skills",
+      "year_id": "Y3",
+      "theory_hours": 2,
+      "practical_hours": 0,
+      "is_elective": false,
+      "lab_periods": 2
+    },
+    {
+      "subject_id": "Y3-S4",
+      "name": "Cloud Computing",
+      "year_id": "Y3",
+      "theory_hours": 2,
+      "practical_hours": 2,
+      "is_elective": true,
+      "lab_periods": 2
+    },
+    {
+      "subject_id": "Y3-S5",
+      "name": "Embedded Systems",
+      "year_id": "Y3",
+      "theory_hours": 3,
+      "practical_hours": 2,
+      "is_elective": false,
+      "lab_periods": 2
+    }
+  ],
+  "faculty": [
+    {
+      "faculty_id": "F01",
+      "name": "Dr. Asha Rao",
+      "department": "Mathematics",
+      "max_daily_hours": 4,
+      "max_weekly_hours": 18,
+      "unavailable_slots": []
+    },
+    {
+      "faculty_id": "F02",
+      "name": "Dr. Vikram Shah",
+      "department": "Computer Science",
+      "max_daily_hours": 4,
+      "max_weekly_hours": 18,
+      "unavailable_slots": []
+    },
+    {
+      "faculty_id": "F03",
+      "name": "Dr. Meera Nair",
+      "department": "Physics",
+      "max_daily_hours": 4,
+      "max_weekly_hours": 18,
+      "unavailable_slots": []
+    },
+    {
+      "faculty_id": "F04",
+      "name": "Dr. Arjun Patel",
+      "department": "Mechanical",
+      "max_daily_hours": 4,
+      "max_weekly_hours": 18,
+      "unavailable_slots": []
+    },
+    {
+      "faculty_id": "F05",
+      "name": "Dr. Sara Khan",
+      "department": "Computer Science",
+      "max_daily_hours": 4,
+      "max_weekly_hours": 18,
+      "unavailable_slots": [
+        "MON-P1"
+      ]
+    },
+    {
+      "faculty_id": "F06",
+      "name": "Dr. Rohan Iyer",
+      "department": "Electronics",
+      "max_daily_hours": 4,
+      "max_weekly_hours": 18,
+      "unavailable_slots": []
+    },
+    {
+      "faculty_id": "F07",
+      "name": "Dr. Neha Das",
+      "department": "Computer Science",
+      "max_daily_hours": 4,
+      "max_weekly_hours": 18,
+      "unavailable_slots": []
+    },
+    {
+      "faculty_id": "F08",
+      "name": "Dr. Kabir Sen",
+      "department": "Humanities",
+      "max_daily_hours": 4,
+      "max_weekly_hours": 18,
+      "unavailable_slots": []
+    },
+    {
+      "faculty_id": "F09",
+      "name": "Dr. Anita Bose",
+      "department": "Computer Science",
+      "max_daily_hours": 4,
+      "max_weekly_hours": 18,
+      "unavailable_slots": []
+    },
+    {
+      "faculty_id": "F10",
+      "name": "Dr. Dev Malhotra",
+      "department": "Electronics",
+      "max_daily_hours": 4,
+      "max_weekly_hours": 18,
+      "unavailable_slots": [
+        "MON-P1"
+      ]
+    },
+    {
+      "faculty_id": "F11",
+      "name": "Dr. Pooja Menon",
+      "department": "Mathematics",
+      "max_daily_hours": 4,
+      "max_weekly_hours": 18,
+      "unavailable_slots": []
+    },
+    {
+      "faculty_id": "F12",
+      "name": "Dr. Ishaan Gupta",
+      "department": "Physics",
+      "max_daily_hours": 4,
+      "max_weekly_hours": 18,
+      "unavailable_slots": []
+    },
+    {
+      "faculty_id": "F13",
+      "name": "Dr. Riya Kulkarni",
+      "department": "Mechanical",
+      "max_daily_hours": 4,
+      "max_weekly_hours": 18,
+      "unavailable_slots": []
+    },
+    {
+      "faculty_id": "F14",
+      "name": "Dr. Manav Joshi",
+      "department": "Computer Science",
+      "max_daily_hours": 4,
+      "max_weekly_hours": 18,
+      "unavailable_slots": []
+    },
+    {
+      "faculty_id": "F15",
+      "name": "Dr. Tara Roy",
+      "department": "Electronics",
+      "max_daily_hours": 4,
+      "max_weekly_hours": 18,
+      "unavailable_slots": [
+        "MON-P1"
+      ]
+    },
+    {
+      "faculty_id": "F16",
+      "name": "Dr. Omar Sheikh",
+      "department": "Humanities",
+      "max_daily_hours": 4,
+      "max_weekly_hours": 18,
+      "unavailable_slots": []
+    }
+  ],
+  "rooms": [
+    {
+      "room_id": "L1",
+      "name": "Lecture Hall 1",
+      "room_type": "lecture",
+      "capacity": 60
+    },
+    {
+      "room_id": "L2",
+      "name": "Lecture Hall 2",
+      "room_type": "lecture",
+      "capacity": 60
+    },
+    {
+      "room_id": "L3",
+      "name": "Lecture Hall 3",
+      "room_type": "lecture",
+      "capacity": 60
+    },
+    {
+      "room_id": "L4",
+      "name": "Lecture Hall 4",
+      "room_type": "lecture",
+      "capacity": 90
+    },
+    {
+      "room_id": "L5",
+      "name": "Lecture Hall 5",
+      "room_type": "lecture",
+      "capacity": 90
+    },
+    {
+      "room_id": "L6",
+      "name": "Lecture Hall 6",
+      "room_type": "lecture",
+      "capacity": 90
+    },
+    {
+      "room_id": "LAB1",
+      "name": "Laboratory 1",
+      "room_type": "lab",
+      "capacity": 30
+    },
+    {
+      "room_id": "LAB2",
+      "name": "Laboratory 2",
+      "room_type": "lab",
+      "capacity": 30
+    },
+    {
+      "room_id": "LAB3",
+      "name": "Laboratory 3",
+      "room_type": "lab",
+      "capacity": 30
+    },
+    {
+      "room_id": "LAB4",
+      "name": "Laboratory 4",
+      "room_type": "lab",
+      "capacity": 30
+    }
+  ],
+  "assignments": [
+    {
+      "assignment_id": "A001",
+      "subject_id": "Y1-S1",
+      "faculty_id": "F01",
+      "year_id": "Y1",
+      "division_id": "Y1-D1",
+      "batch_id": null,
+      "session_type": "theory",
+      "hours_per_week": 4,
+      "preferred_room_id": "L1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A002",
+      "subject_id": "Y1-S1",
+      "faculty_id": "F01",
+      "year_id": "Y1",
+      "division_id": "Y1-D2",
+      "batch_id": null,
+      "session_type": "theory",
+      "hours_per_week": 4,
+      "preferred_room_id": "L1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A003",
+      "subject_id": "Y1-S2",
+      "faculty_id": "F02",
+      "year_id": "Y1",
+      "division_id": "Y1-D1",
+      "batch_id": null,
+      "session_type": "theory",
+      "hours_per_week": 3,
+      "preferred_room_id": "L1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A004",
+      "subject_id": "Y1-S2",
+      "faculty_id": "F02",
+      "year_id": "Y1",
+      "division_id": "Y1-D1",
+      "batch_id": "Y1-D1-B1",
+      "session_type": "practical",
+      "hours_per_week": 2,
+      "preferred_room_id": "LAB1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A005",
+      "subject_id": "Y1-S2",
+      "faculty_id": "F02",
+      "year_id": "Y1",
+      "division_id": "Y1-D2",
+      "batch_id": null,
+      "session_type": "theory",
+      "hours_per_week": 3,
+      "preferred_room_id": "L1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A006",
+      "subject_id": "Y1-S2",
+      "faculty_id": "F02",
+      "year_id": "Y1",
+      "division_id": "Y1-D2",
+      "batch_id": "Y1-D2-B1",
+      "session_type": "practical",
+      "hours_per_week": 2,
+      "preferred_room_id": "LAB1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A007",
+      "subject_id": "Y1-S3",
+      "faculty_id": "F03",
+      "year_id": "Y1",
+      "division_id": "Y1-D1",
+      "batch_id": null,
+      "session_type": "theory",
+      "hours_per_week": 3,
+      "preferred_room_id": "L1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A008",
+      "subject_id": "Y1-S3",
+      "faculty_id": "F03",
+      "year_id": "Y1",
+      "division_id": "Y1-D1",
+      "batch_id": "Y1-D1-B1",
+      "session_type": "practical",
+      "hours_per_week": 2,
+      "preferred_room_id": "LAB1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A009",
+      "subject_id": "Y1-S3",
+      "faculty_id": "F03",
+      "year_id": "Y1",
+      "division_id": "Y1-D2",
+      "batch_id": null,
+      "session_type": "theory",
+      "hours_per_week": 3,
+      "preferred_room_id": "L1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A010",
+      "subject_id": "Y1-S3",
+      "faculty_id": "F03",
+      "year_id": "Y1",
+      "division_id": "Y1-D2",
+      "batch_id": "Y1-D2-B1",
+      "session_type": "practical",
+      "hours_per_week": 2,
+      "preferred_room_id": "LAB1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A011",
+      "subject_id": "Y1-S4",
+      "faculty_id": "F04",
+      "year_id": "Y1",
+      "division_id": "Y1-D1",
+      "batch_id": null,
+      "session_type": "theory",
+      "hours_per_week": 2,
+      "preferred_room_id": "L1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A012",
+      "subject_id": "Y1-S4",
+      "faculty_id": "F04",
+      "year_id": "Y1",
+      "division_id": "Y1-D1",
+      "batch_id": "Y1-D1-B1",
+      "session_type": "practical",
+      "hours_per_week": 2,
+      "preferred_room_id": "LAB1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A013",
+      "subject_id": "Y1-S4",
+      "faculty_id": "F04",
+      "year_id": "Y1",
+      "division_id": "Y1-D2",
+      "batch_id": null,
+      "session_type": "theory",
+      "hours_per_week": 2,
+      "preferred_room_id": "L1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A014",
+      "subject_id": "Y1-S4",
+      "faculty_id": "F04",
+      "year_id": "Y1",
+      "division_id": "Y1-D2",
+      "batch_id": "Y1-D2-B1",
+      "session_type": "practical",
+      "hours_per_week": 2,
+      "preferred_room_id": "LAB1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A015",
+      "subject_id": "Y1-S5",
+      "faculty_id": "F05",
+      "year_id": "Y1",
+      "division_id": "Y1-D1",
+      "batch_id": null,
+      "session_type": "theory",
+      "hours_per_week": 3,
+      "preferred_room_id": "L1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A016",
+      "subject_id": "Y1-S5",
+      "faculty_id": "F05",
+      "year_id": "Y1",
+      "division_id": "Y1-D1",
+      "batch_id": "Y1-D1-B1",
+      "session_type": "practical",
+      "hours_per_week": 2,
+      "preferred_room_id": "LAB1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A017",
+      "subject_id": "Y1-S5",
+      "faculty_id": "F05",
+      "year_id": "Y1",
+      "division_id": "Y1-D2",
+      "batch_id": null,
+      "session_type": "theory",
+      "hours_per_week": 3,
+      "preferred_room_id": "L1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A018",
+      "subject_id": "Y1-S5",
+      "faculty_id": "F05",
+      "year_id": "Y1",
+      "division_id": "Y1-D2",
+      "batch_id": "Y1-D2-B1",
+      "session_type": "practical",
+      "hours_per_week": 2,
+      "preferred_room_id": "LAB1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A019",
+      "subject_id": "Y2-S1",
+      "faculty_id": "F06",
+      "year_id": "Y2",
+      "division_id": "Y2-D1",
+      "batch_id": null,
+      "session_type": "theory",
+      "hours_per_week": 3,
+      "preferred_room_id": "L1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A020",
+      "subject_id": "Y2-S1",
+      "faculty_id": "F06",
+      "year_id": "Y2",
+      "division_id": "Y2-D1",
+      "batch_id": "Y2-D1-B1",
+      "session_type": "practical",
+      "hours_per_week": 2,
+      "preferred_room_id": "LAB1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A021",
+      "subject_id": "Y2-S1",
+      "faculty_id": "F06",
+      "year_id": "Y2",
+      "division_id": "Y2-D2",
+      "batch_id": null,
+      "session_type": "theory",
+      "hours_per_week": 3,
+      "preferred_room_id": "L1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A022",
+      "subject_id": "Y2-S1",
+      "faculty_id": "F06",
+      "year_id": "Y2",
+      "division_id": "Y2-D2",
+      "batch_id": "Y2-D2-B1",
+      "session_type": "practical",
+      "hours_per_week": 2,
+      "preferred_room_id": "LAB1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A023",
+      "subject_id": "Y2-S2",
+      "faculty_id": "F07",
+      "year_id": "Y2",
+      "division_id": "Y2-D1",
+      "batch_id": null,
+      "session_type": "theory",
+      "hours_per_week": 3,
+      "preferred_room_id": "L1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A024",
+      "subject_id": "Y2-S2",
+      "faculty_id": "F07",
+      "year_id": "Y2",
+      "division_id": "Y2-D1",
+      "batch_id": "Y2-D1-B1",
+      "session_type": "practical",
+      "hours_per_week": 2,
+      "preferred_room_id": "LAB1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A025",
+      "subject_id": "Y2-S2",
+      "faculty_id": "F07",
+      "year_id": "Y2",
+      "division_id": "Y2-D2",
+      "batch_id": null,
+      "session_type": "theory",
+      "hours_per_week": 3,
+      "preferred_room_id": "L1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A026",
+      "subject_id": "Y2-S2",
+      "faculty_id": "F07",
+      "year_id": "Y2",
+      "division_id": "Y2-D2",
+      "batch_id": "Y2-D2-B1",
+      "session_type": "practical",
+      "hours_per_week": 2,
+      "preferred_room_id": "LAB1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A027",
+      "subject_id": "Y2-S3",
+      "faculty_id": "F08",
+      "year_id": "Y2",
+      "division_id": "Y2-D1",
+      "batch_id": null,
+      "session_type": "theory",
+      "hours_per_week": 3,
+      "preferred_room_id": "L1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A028",
+      "subject_id": "Y2-S3",
+      "faculty_id": "F08",
+      "year_id": "Y2",
+      "division_id": "Y2-D1",
+      "batch_id": "Y2-D1-B1",
+      "session_type": "practical",
+      "hours_per_week": 2,
+      "preferred_room_id": "LAB1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A029",
+      "subject_id": "Y2-S3",
+      "faculty_id": "F08",
+      "year_id": "Y2",
+      "division_id": "Y2-D2",
+      "batch_id": null,
+      "session_type": "theory",
+      "hours_per_week": 3,
+      "preferred_room_id": "L1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A030",
+      "subject_id": "Y2-S3",
+      "faculty_id": "F08",
+      "year_id": "Y2",
+      "division_id": "Y2-D2",
+      "batch_id": "Y2-D2-B1",
+      "session_type": "practical",
+      "hours_per_week": 2,
+      "preferred_room_id": "LAB1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A031",
+      "subject_id": "Y2-S4",
+      "faculty_id": "F09",
+      "year_id": "Y2",
+      "division_id": "Y2-D1",
+      "batch_id": null,
+      "session_type": "theory",
+      "hours_per_week": 2,
+      "preferred_room_id": "L1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A032",
+      "subject_id": "Y2-S4",
+      "faculty_id": "F09",
+      "year_id": "Y2",
+      "division_id": "Y2-D2",
+      "batch_id": null,
+      "session_type": "theory",
+      "hours_per_week": 2,
+      "preferred_room_id": "L1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A033",
+      "subject_id": "Y2-S5",
+      "faculty_id": "F10",
+      "year_id": "Y2",
+      "division_id": "Y2-D1",
+      "batch_id": null,
+      "session_type": "theory",
+      "hours_per_week": 2,
+      "preferred_room_id": "L1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A034",
+      "subject_id": "Y2-S5",
+      "faculty_id": "F10",
+      "year_id": "Y2",
+      "division_id": "Y2-D1",
+      "batch_id": "Y2-D1-B1",
+      "session_type": "practical",
+      "hours_per_week": 2,
+      "preferred_room_id": "LAB1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A035",
+      "subject_id": "Y2-S5",
+      "faculty_id": "F10",
+      "year_id": "Y2",
+      "division_id": "Y2-D2",
+      "batch_id": null,
+      "session_type": "theory",
+      "hours_per_week": 2,
+      "preferred_room_id": "L1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A036",
+      "subject_id": "Y2-S5",
+      "faculty_id": "F10",
+      "year_id": "Y2",
+      "division_id": "Y2-D2",
+      "batch_id": "Y2-D2-B1",
+      "session_type": "practical",
+      "hours_per_week": 2,
+      "preferred_room_id": "LAB1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A037",
+      "subject_id": "Y3-S1",
+      "faculty_id": "F11",
+      "year_id": "Y3",
+      "division_id": "Y3-D1",
+      "batch_id": null,
+      "session_type": "theory",
+      "hours_per_week": 3,
+      "preferred_room_id": "L1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A038",
+      "subject_id": "Y3-S1",
+      "faculty_id": "F11",
+      "year_id": "Y3",
+      "division_id": "Y3-D1",
+      "batch_id": "Y3-D1-B1",
+      "session_type": "practical",
+      "hours_per_week": 2,
+      "preferred_room_id": "LAB1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A039",
+      "subject_id": "Y3-S1",
+      "faculty_id": "F11",
+      "year_id": "Y3",
+      "division_id": "Y3-D2",
+      "batch_id": null,
+      "session_type": "theory",
+      "hours_per_week": 3,
+      "preferred_room_id": "L1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A040",
+      "subject_id": "Y3-S1",
+      "faculty_id": "F11",
+      "year_id": "Y3",
+      "division_id": "Y3-D2",
+      "batch_id": "Y3-D2-B1",
+      "session_type": "practical",
+      "hours_per_week": 2,
+      "preferred_room_id": "LAB1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A041",
+      "subject_id": "Y3-S2",
+      "faculty_id": "F12",
+      "year_id": "Y3",
+      "division_id": "Y3-D1",
+      "batch_id": null,
+      "session_type": "theory",
+      "hours_per_week": 3,
+      "preferred_room_id": "L1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A042",
+      "subject_id": "Y3-S2",
+      "faculty_id": "F12",
+      "year_id": "Y3",
+      "division_id": "Y3-D1",
+      "batch_id": "Y3-D1-B1",
+      "session_type": "practical",
+      "hours_per_week": 2,
+      "preferred_room_id": "LAB1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A043",
+      "subject_id": "Y3-S2",
+      "faculty_id": "F12",
+      "year_id": "Y3",
+      "division_id": "Y3-D2",
+      "batch_id": null,
+      "session_type": "theory",
+      "hours_per_week": 3,
+      "preferred_room_id": "L1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A044",
+      "subject_id": "Y3-S2",
+      "faculty_id": "F12",
+      "year_id": "Y3",
+      "division_id": "Y3-D2",
+      "batch_id": "Y3-D2-B1",
+      "session_type": "practical",
+      "hours_per_week": 2,
+      "preferred_room_id": "LAB1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A045",
+      "subject_id": "Y3-S3",
+      "faculty_id": "F13",
+      "year_id": "Y3",
+      "division_id": "Y3-D1",
+      "batch_id": null,
+      "session_type": "theory",
+      "hours_per_week": 2,
+      "preferred_room_id": "L1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A046",
+      "subject_id": "Y3-S3",
+      "faculty_id": "F13",
+      "year_id": "Y3",
+      "division_id": "Y3-D2",
+      "batch_id": null,
+      "session_type": "theory",
+      "hours_per_week": 2,
+      "preferred_room_id": "L1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A047",
+      "subject_id": "Y3-S4",
+      "faculty_id": "F14",
+      "year_id": "Y3",
+      "division_id": "Y3-D1",
+      "batch_id": null,
+      "session_type": "theory",
+      "hours_per_week": 2,
+      "preferred_room_id": "L1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A048",
+      "subject_id": "Y3-S4",
+      "faculty_id": "F14",
+      "year_id": "Y3",
+      "division_id": "Y3-D1",
+      "batch_id": "Y3-D1-B1",
+      "session_type": "practical",
+      "hours_per_week": 2,
+      "preferred_room_id": "LAB1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A049",
+      "subject_id": "Y3-S4",
+      "faculty_id": "F14",
+      "year_id": "Y3",
+      "division_id": "Y3-D2",
+      "batch_id": null,
+      "session_type": "theory",
+      "hours_per_week": 2,
+      "preferred_room_id": "L1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A050",
+      "subject_id": "Y3-S4",
+      "faculty_id": "F14",
+      "year_id": "Y3",
+      "division_id": "Y3-D2",
+      "batch_id": "Y3-D2-B1",
+      "session_type": "practical",
+      "hours_per_week": 2,
+      "preferred_room_id": "LAB1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A051",
+      "subject_id": "Y3-S5",
+      "faculty_id": "F15",
+      "year_id": "Y3",
+      "division_id": "Y3-D1",
+      "batch_id": null,
+      "session_type": "theory",
+      "hours_per_week": 3,
+      "preferred_room_id": "L1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A052",
+      "subject_id": "Y3-S5",
+      "faculty_id": "F15",
+      "year_id": "Y3",
+      "division_id": "Y3-D1",
+      "batch_id": "Y3-D1-B1",
+      "session_type": "practical",
+      "hours_per_week": 2,
+      "preferred_room_id": "LAB1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A053",
+      "subject_id": "Y3-S5",
+      "faculty_id": "F15",
+      "year_id": "Y3",
+      "division_id": "Y3-D2",
+      "batch_id": null,
+      "session_type": "theory",
+      "hours_per_week": 3,
+      "preferred_room_id": "L1",
+      "locked_slots": []
+    },
+    {
+      "assignment_id": "A054",
+      "subject_id": "Y3-S5",
+      "faculty_id": "F15",
+      "year_id": "Y3",
+      "division_id": "Y3-D2",
+      "batch_id": "Y3-D2-B1",
+      "session_type": "practical",
+      "hours_per_week": 2,
+      "preferred_room_id": "LAB1",
+      "locked_slots": []
+    }
+  ],
+  "days": [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday"
+  ],
+  "periods_per_day": 6,
+  "lunch_after_period": 3,
+  "include_saturday": false,
+  "rules": {
+    "lunch_minutes": 45,
+    "break_minutes": 15,
+    "lab_length_periods": 2,
+    "lecture_room_type": "lecture",
+    "practical_room_type": "lab",
+    "faculty_daily_limit": 4,
+    "faculty_weekly_limit": 18
+  },
+  "metadata": {
+    "institution": "Example College of Engineering",
+    "academic_year": "2026-27",
+    "description": "Illustrative multi-year college timetable dataset."
+  }
+}
