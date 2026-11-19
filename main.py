@@ -133,6 +133,11 @@ class TimetableApp(ctk.CTk):
             self.tree.insert("", "end", values=(row["Course Code"], row["Professor"], row["Student Group"], row["Assigned Time Slot"]))
 
         self._render_graph(coloring)
+        conflicts = self.scheduler.validate_coloring(coloring)
+        if conflicts:
+            self.status_label.configure(text=f"⚠ {len(conflicts)} conflict(s) found", text_color="red")
+        else:
+            self.status_label.configure(text="✓ Schedule is conflict-free", text_color="green")
 
     def _render_graph(self, coloring):
         if self.canvas:
