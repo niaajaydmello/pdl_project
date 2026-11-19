@@ -19,12 +19,25 @@ A desktop application that creates a timetable by modeling courses as a graph. C
 - View the timetable and conflict graph in separate tabs.
 - Export the generated timetable as `generated_timetable.csv`.
 - Start with sample courses so the app has example data to display.
+- Automatic schedule validation: each generated schedule is checked for conflicts, and the result is shown in the app (green when valid, red with the number of conflicts otherwise).
 
 ## How scheduling works
 
 Each course is represented by a node in a NetworkX graph. An edge connects courses that have the same professor or student group, because those courses should not be scheduled at the same time. The scheduler orders courses by graph degree and assigns each course the lowest available color not used by its neighboring courses. Each color represents a time slot.
 
 The algorithm is a heuristic: it produces a valid schedule for the detected conflicts, but it does not guarantee the fewest possible time slots. Fifteen named weekday time slots are provided; if a schedule needs more, additional slots are labeled `Slot 16`, `Slot 17`, and so on.
+
+### Schedule validation
+
+After a schedule is generated, `validate_coloring()` checks every conflict edge in
+the graph and confirms that the two courses it connects were not assigned the same
+time slot. It returns a list of conflicting course pairs. An empty list means the
+schedule is valid.
+
+Because the Welsh–Powell algorithm only assigns a color that none of a course's
+neighbors use, the generated schedule should always pass this check. The validator
+acts as a safety net: it verifies the result independently, and it will also catch
+problems if the coloring logic is changed later.
 
 ## Main functions and modules
 
@@ -33,7 +46,7 @@ The algorithm is a heuristic: it produces a valid schedule for the detected conf
 - `TimetableApp.__init__()` creates the app, scheduler, and interface, then loads sample courses.
 - `TimetableApp._build_ui()` and the panel-building methods create the window, controls, timetable, and tabs.
 - `TimetableApp.add_course()` validates the form and adds a course.
-- `TimetableApp.generate_schedule()` updates the timetable and graph.
+- `TimetableApp.generate_schedule()` updates the timetable and graph, validates the result with `validate_coloring()`, and updates the status message.
 - `TimetableApp._render_graph()` embeds the graph visualization in the app.
 - `TimetableApp.export_csv()` writes the generated schedule to `generated_timetable.csv` in the current working directory.
 - `TimetableApp._load_sample_data()` adds example courses.
@@ -44,6 +57,7 @@ The algorithm is a heuristic: it produces a valid schedule for the detected conf
 - `TimetableScheduler.add_conflict()` adds an edge between two existing courses.
 - `TimetableScheduler.auto_detect_conflicts()` finds shared professors or student groups.
 - `TimetableScheduler.welsh_powell_coloring()` assigns a color/time-slot index to each course.
+- `TimetableScheduler.validate_coloring()` checks a course-to-color mapping against the conflict graph and returns the list of course pairs that share a time slot (empty if the schedule is valid).
 - `TimetableScheduler.generate_schedule()` returns the schedule as a Pandas DataFrame and the course-to-color mapping.
 
 ### `visualizer.py`
@@ -132,8 +146,11 @@ The app window stays open while it is running. Close the window to exit. If Term
 1. On startup, the app loads example courses and generates a sample schedule.
 2. Enter a course code, professor, and student group, then select **Add Course**.
 3. Select **Generate Schedule** to include added courses and refresh the results.
-4. Use the **Timetable** and **Conflict Graph Visualization** tabs to view the output.
-5. Select **Export CSV** to write `generated_timetable.csv` to the directory from which the app was launched.
+4. Check the status message in the controls panel:
+   - **✓ Schedule is conflict-free** (green) means no two conflicting courses share a time slot.
+   - **⚠ N conflict(s) found** (red) means N pairs of conflicting courses were placed in the same slot. Review your courses and generate the schedule again.
+5. Use the **Timetable** and **Conflict Graph Visualization** tabs to view the output.
+6. Select **Export CSV** to write `generated_timetable.csv` to the directory from which the app was launched.
 
 Course data is kept in memory and is not saved when the app closes. Export the schedule if you need to keep a copy.
 
