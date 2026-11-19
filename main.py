@@ -19,6 +19,7 @@ class TimetableApp(ctk.CTk):
 
         self.scheduler = TimetableScheduler()
         self.canvas = None
+        self.selected_course_code = None
 
         self._build_ui()
         self._load_sample_data()
@@ -60,6 +61,15 @@ class TimetableApp(ctk.CTk):
         # Action Buttons
         btn_add = ctk.CTkButton(self.left_frame, text="Add Course", command=self.add_course)
         btn_add.pack(fill="x", padx=15, pady=10)
+
+        btn_update = ctk.CTkButton(self.left_frame, text="Update Selected", command=self.update_selected_course)
+        btn_update.pack(fill="x", padx=15, pady=5)
+
+        btn_delete = ctk.CTkButton(self.left_frame, text="Delete Selected", command=self.delete_selected_course)
+        btn_delete.pack(fill="x", padx=15, pady=5)
+
+        btn_clear = ctk.CTkButton(self.left_frame, text="Clear All", fg_color="#c0392b", hover_color="#922b21", command=self.clear_all_courses)
+        btn_clear.pack(fill="x", padx=15, pady=5)
 
         btn_run = ctk.CTkButton(self.left_frame, text="Generate Schedule", fg_color="#27ae60", hover_color="#219150", command=self.generate_schedule)
         btn_run.pack(fill="x", padx=15, pady=10)
@@ -103,6 +113,34 @@ class TimetableApp(ctk.CTk):
         self.tree.column("Slot", width=200)
 
         self.tree.pack(fill="both", expand=True, padx=10, pady=10)
+        self.tree.bind("<<TreeviewSelect>>", self._on_course_selected)
+
+    def _on_course_selected(self, _event=None):
+        selection = self.tree.selection()
+        if not selection:
+            self.selected_course_code = None
+            return
+        values = self.tree.item(selection[0], "values")
+        if not values:
+            return
+        self.selected_course_code = str(values[0])
+        for entry, value in zip((self.entry_code, self.entry_prof, self.entry_group), values[:3]):
+            entry.delete(0, "end")
+            entry.insert(0, value)
+
+    def _clear_graph(self):
+        if self.canvas:
+            self.canvas.get_tk_widget().destroy()
+            self.canvas = None
+
+    def _refresh_schedule(self):
+        if self.scheduler.courses:
+            self.generate_schedule()
+            return
+        for row in self.tree.get_children():
+            self.tree.delete(row)
+        self._clear_graph()
+        self.selected_course_code = None
 
     def add_course(self):
         code = self.entry_code.get().strip()
@@ -114,10 +152,53 @@ class TimetableApp(ctk.CTk):
             return
 
         self.scheduler.add_course(code, prof, group)
+        self.selected_course_code = None
         messagebox.showinfo("Success", f"Course '{code}' added successfully.")
         self.entry_code.delete(0, 'end')
         self.entry_prof.delete(0, 'end')
         self.entry_group.delete(0, 'end')
+
+    def update_selected_course(self):
+        if not self.selected_course_code:
+            messagebox.showwarning("Selection Required", "Select a course in the timetable first.")
+            return
+
+        new_code = self.entry_code.get().strip()
+        prof = self.entry_prof.get().strip()
+        group = self.entry_group.get().strip()
+        if not new_code or not prof or not group:
+            messagebox.showwarning("Input Error", "Please fill all fields.")
+            return
+
+        old_code = self.selected_course_code
+        if not self.scheduler.update_course(old_code, new_code, prof, group):
+            messagebox.showwarning("Update Error", "The course no longer exists or that course code is already in use.")
+            return
+
+        self.selected_course_code = None
+        self._refresh_schedule()
+
+    def delete_selected_course(self):
+        selection = self.tree.selection()
+        if not selection:
+            messagebox.showwarning("Selection Required", "Select a course in the timetable first.")
+            return
+        values = self.tree.item(selection[0], "values")
+        if not values or not self.scheduler.remove_course(str(values[0])):
+            messagebox.showwarning("Delete Error", "The selected course could not be found.")
+            return
+        self._refresh_schedule()
+
+    def clear_all_courses(self):
+        if not messagebox.askyesno("Clear All Courses", "Are you sure you want to delete all courses?"):
+            return
+        self.scheduler.clear_courses()
+        for row in self.tree.get_children():
+            self.tree.delete(row)
+        self._clear_graph()
+        self.selected_course_code = None
+        for entry in (self.entry_code, self.entry_prof, self.entry_group):
+            entry.delete(0, "end")
 
     def generate_schedule(self):
         if not self.scheduler.courses:
@@ -128,6 +209,7 @@ class TimetableApp(ctk.CTk):
 
         for row in self.tree.get_children():
             self.tree.delete(row)
+        self.selected_course_code = None
 
         for _, row in df.iterrows():
             self.tree.insert("", "end", values=(row["Course Code"], row["Professor"], row["Student Group"], row["Assigned Time Slot"]))
@@ -135,8 +217,7 @@ class TimetableApp(ctk.CTk):
         self._render_graph(coloring)
 
     def _render_graph(self, coloring):
-        if self.canvas:
-            self.canvas.get_tk_widget().destroy()
+        self._clear_graph()
 
         fig = GraphVisualizer.draw_colored_graph(self.scheduler.graph, coloring)
         self.canvas = FigureCanvasTkAgg(fig, master=self.tab_graph)

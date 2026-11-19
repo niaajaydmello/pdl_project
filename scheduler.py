@@ -23,6 +23,36 @@ class TimetableScheduler:
         }
         self.graph.add_node(course_code)
 
+    def remove_course(self, course_code: str) -> bool:
+        """Remove a course and its graph node, returning whether it existed."""
+        if course_code not in self.courses:
+            return False
+        del self.courses[course_code]
+        self.graph.remove_node(course_code)
+        return True
+
+    def update_course(self, old_code: str, new_code: str, professor: str, student_group: str) -> bool:
+        """Update course details, refusing to overwrite a different course."""
+        if old_code not in self.courses:
+            return False
+        if new_code != old_code and new_code in self.courses:
+            return False
+
+        # Rebuild the graph after changing its node label so no old conflict
+        # edges or node attributes can survive the edit.
+        courses = dict(self.courses)
+        del courses[old_code]
+        courses[new_code] = {"professor": professor, "group": student_group}
+        self.courses = courses
+        self.graph.clear()
+        self.graph.add_nodes_from(self.courses)
+        return True
+
+    def clear_courses(self) -> None:
+        """Remove all courses and all graph nodes and edges."""
+        self.courses.clear()
+        self.graph.clear()
+
     def add_conflict(self, course1: str, course2: str, reason: str = "Constraint"):
         """Add an edge between two courses indicating a schedule conflict."""
         if course1 in self.graph and course2 in self.graph:
@@ -30,6 +60,8 @@ class TimetableScheduler:
 
     def auto_detect_conflicts(self):
         """Automatically add conflict edges based on shared professors or student groups."""
+        self.graph.clear()
+        self.graph.add_nodes_from(self.courses)
         course_list = list(self.courses.keys())
         for i in range(len(course_list)):
             for j in range(i + 1, len(course_list)):
