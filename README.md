@@ -9,7 +9,7 @@ A desktop application that creates a timetable by modeling courses as a graph. C
 - Nia Dmello
 - Jaanya Jain
 - Chakshu Patel
-- Shraddha
+- Shraddha Savale
 
 ## Features
 
