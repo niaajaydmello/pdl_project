@@ -1,0 +1,19 @@
+id,name,email,max_daily_hours,max_weekly_hours,unavailable_slots,preferred_slots
+F001,Dr. Sharma,sharma@college.edu,6,18,Mon-P1;Mon-P2,Tue-P3;Wed-P4
+F002,Dr. Patel,patel@college.edu,6,18,Tue-P1;Tue-P2,Mon-P4;Thu-P5
+F003,Dr. Singh,singh@college.edu,5,16,Wed-P1;Wed-P2,Fri-P3;Fri-P4
+F004,Dr. Gupta,gupta@college.edu,6,18,Thu-P1;Thu-P2,Mon-P6;Tue-P6
+F005,Dr. Reddy,reddy@college.edu,5,15,Fri-P1;Fri-P2,Thu-P5;Wed-P5
+F006,Dr. Kumar,kumar@college.edu,6,18,Mon-P3;Mon-P4,Tue-P1;Wed-P1
+F007,Dr. Joshi,joshi@college.edu,6,18,Tue-P3;Tue-P4,Fri-P1;Thu-P1
+F008,Dr. Nair,nair@college.edu,5,16,Wed-P3;Wed-P4,Mon-P2;Tue-P2
+F009,Dr. Iyer,iyer@college.edu,6,18,Thu-P3;Thu-P4,Fri-P6;Wed-P6
+F010,Dr. Das,das@college.edu,5,15,Fri-P3;Fri-P4,Mon-P5;Tue-P5
+F011,Prof. Rao,rao@college.edu,6,18,Mon-P5;Mon-P6,Thu-P2;Wed-P2
+F012,Prof. Menon,menon@college.edu,6,18,Tue-P5;Tue-P6,Fri-P1;Mon-P1
+F013,Prof. Shah,shah@college.edu,5,16,Wed-P5;Wed-P6,Thu-P3;Tue-P3
+F014,Prof. Verma,verma@college.edu,6,18,Thu-P5;Thu-P6,Fri-P2;Mon-P3
+F015,Prof. Agarwal,agarwal@college.edu,5,15,Fri-P5;Fri-P6,Tue-P4;Wed-P4
+F016,Prof. Bose,bose@college.edu,6,18,Mon-P7;Tue-P7,Thu-P7;Wed-P7
+F017,Prof. Chatterjee,chatterjee@college.edu,6,18,Thu-P7;Wed-P7,Fri-P7;Mon-P4
+F018,Prof. Banerjee,banerjee@college.edu,5,16,Fri-P7;Mon-P7,Tue-P7;Wed-P1
